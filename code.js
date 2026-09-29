@@ -35,3 +35,13 @@ export function caesarCipher(str, shift) {
     .map((char) => shiftChar(char, shift))
     .join('');
 }
+
+export function analyzeArray(arr) {
+  const sum = arr.reduce((acc, curr) => acc + curr, 0);
+  return {
+    average: sum / arr.length,
+    min: Math.min(...arr),
+    max: Math.max(...arr),
+    length: arr.length,
+  };
+}
